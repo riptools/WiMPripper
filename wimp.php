@@ -63,12 +63,6 @@ foreach ($dir as $i=>$file)
 	else
 		$outfile="{$track} {$songname}.$type";
 	
-	
-/*	if(PHP_OS=='WINNT')
-	{
-		$songname=utf8_decode($songname);
-		$artist=utf8_decode($artist);
-	}*/
 	$outfile=$outputfolder.filnavn($outfile);
 	if(file_exists($outfile))
 		continue;
@@ -85,12 +79,7 @@ foreach ($dir as $i=>$file)
 	if(PHP_OS=='WINNT')
 		utf8_decode($cmd);
 	echo shell_exec($cmd);
-	//print_r($tracklist[$i]);
-	//die();
 	echo $cmd."\n";
 
 }
-/*if(file_exists($artwork))
-	unlink($artwork);*/
-
 ?>
